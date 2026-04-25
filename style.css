@@ -108,3 +108,45 @@ nav a { color: white; text-decoration: none; font-weight: bold; }
     cursor: pointer;
     width: 100%;
 }
+
+/* Classes pour l'animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet de zoom sur les images de pizza */
+.pizza-card {
+    overflow: hidden;
+    border-radius: 15px;
+    background: #222;
+    transition: transform 0.3s ease;
+}
+
+.pizza-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+}
+
+.cart-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--secondary);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: none;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
