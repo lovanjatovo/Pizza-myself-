@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Bella Notte | Artisanale & Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">🍕 Bella Notte</div>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#custom">Crée ta Pizza</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>L'art de la Pizza, <br><span>à votre façon.</span></h1>
+        <p>Découvrez nos recettes ancestrales ou créez la vôtre en quelques clics.</p>
+        <a href="#custom" class="btn">Essayer l'outil interactif</a>
+    </section>
+
+    <section id="custom" class="interactive-section">
+        <h2>Atelier de Création 👨‍🍳</h2>
+        <div class="pizza-builder">
+            <div class="preview-container">
+                <div id="pizza-visual" class="pizza-base">
+                    </div>
+            </div>
+
+            <div class="controls">
+                <h3>Personnalisez votre pizza :</h3>
+                
+                <label>Base :</label>
+                <select id="base-select">
+                    <option value="tomato" data-price="8">Tomate (8€)</option>
+                    <option value="cream" data-price="9">Crème Fraîche (9€)</option>
+                </select>
+
+                <label>Ingrédients (+1.50€/u) :</label>
+                <div class="ingredients-grid">
+                    <label><input type="checkbox" value="mozza" data-price="1.5"> Mozzarella</label>
+                    <label><input type="checkbox" value="ham" data-price="1.5"> Jambon</label>
+                    <label><input type="checkbox" value="mushroom" data-price="1.5"> Champignons</label>
+                    <label><input type="checkbox" value="olive" data-price="1.5"> Olives</label>
+                    <label><input type="checkbox" value="rocket" data-price="1.5"> Roquette</label>
+                </div>
+
+                <div class="total-price">
+                    Prix Total : <span id="total-amount">8.00</span>€
+                </div>
+                <button class="order-btn">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
